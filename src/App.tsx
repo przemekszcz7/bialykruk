@@ -656,99 +656,89 @@ export default function App() {
         id="kontakt" 
         className="relative bg-brand-bg2 py-24 md:py-32 overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
-            {/* Left direct contact details */}
-            <div className="lg:col-span-7 reveal-item">
-              <span className="text-brand-accent text-xs font-mono tracking-widest uppercase mb-4 block">
-                Zorganizujmy niezapomniany bar
-              </span>
-              <h2 className="text-5xl sm:text-6xl font-black font-display uppercase tracking-wider text-brand-white mb-4">
-                Porozmawiajmy
-              </h2>
-              <p className="text-brand-gray text-sm sm:text-base font-sans tracking-wide mb-12">
-                Napisz lub zadzwoń — wstępną kalkulację kosztów i unikalną ofertę menu koktajli przygotujemy szybko i całkowicie bezpłatnie.
-              </p>
+        <div className="max-w-3xl mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center">
+          
+          {/* Direct contact details */}
+          <div className="reveal-item w-full flex flex-col items-center">
+            <span className="text-brand-accent text-xs font-mono tracking-widest uppercase mb-4 block">
+              Zorganizujmy niezapomniany bar
+            </span>
+            <h2 className="text-5xl sm:text-6xl font-black font-display uppercase tracking-wider text-brand-white mb-4">
+              Porozmawiajmy
+            </h2>
+            <p className="text-brand-gray text-sm sm:text-base font-sans tracking-wide mb-12 max-w-xl">
+              Napisz lub zadzwoń — wstępną kalkulację kosztów i unikalną ofertę menu koktajli przygotujemy szybko i całkowicie bezpłatnie.
+            </p>
 
-              {/* Functional clickable contact elements */}
-              <div className="space-y-6">
-                
-                {/* Phone contact card */}
-                <a 
-                  href="tel:505393758" 
-                  className="flex items-center gap-6 p-5 border border-brand-white/5 bg-brand-bg/40 max-w-md hover:border-brand-accent rounded-sm group transition-all duration-300"
-                  id="contact-phone-card"
-                >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-bg border border-brand-accent/20 text-brand-accent group-hover:scale-110 transition-transform">
-                    <Phone size={18} />
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-mono tracking-widest text-[#8d8d8d]">ZADZWOŃ TERAZ</p>
-                    <p className="text-lg font-bold text-brand-white group-hover:text-brand-accent tracking-wide transition-colors">
-                      505 393 758
-                    </p>
-                  </div>
-                </a>
-
-                {/* Email contact card */}
-                <a 
-                  href="mailto:adrian_kruk@op.pl" 
-                  className="flex items-center gap-6 p-5 border border-brand-white/5 bg-brand-bg/40 max-w-md hover:border-brand-accent rounded-sm group transition-all duration-300"
-                  id="contact-email-card"
-                >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-bg border border-brand-accent/20 text-brand-accent group-hover:scale-110 transition-transform">
-                    <Mail size={18} />
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-mono tracking-widest text-[#8d8d8d]">NAPISZ WIADOMOŚĆ</p>
-                    <p className="text-lg font-bold text-brand-white group-hover:text-brand-accent tracking-wide transition-colors">
-                      adrian_kruk@op.pl
-                    </p>
-                  </div>
-                </a>
-
-                {/* Location context card */}
-                <div 
-                  className="flex items-center gap-6 p-5 border border-brand-white/5 bg-brand-bg2 max-w-md rounded-sm"
-                  id="contact-location-card"
-                >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-bg border border-brand-white/10 text-brand-white">
-                    <MapPin size={18} />
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-mono tracking-widest text-[#8d8d8d]">NASZA LOKALIZACJA</p>
-                    <p className="text-sm sm:text-base font-semibold text-brand-white tracking-wide">
-                      03-983, Warszawa, Woj. Mazowieckie
-                    </p>
-                  </div>
+            {/* Functional clickable contact elements */}
+            <div className="space-y-6 w-full max-w-md mx-auto">
+              
+              {/* Phone contact card */}
+              <a 
+                href="tel:505393758" 
+                className="flex items-center gap-6 p-5 border border-brand-white/5 bg-brand-bg/40 hover:border-brand-accent rounded-sm group transition-all duration-300 text-left"
+                id="contact-phone-card"
+              >
+                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-bg border border-brand-accent/20 text-brand-accent group-hover:scale-110 transition-transform flex-shrink-0">
+                  <Phone size={18} />
                 </div>
+                <div>
+                  <p className="text-[10px] font-mono tracking-widest text-[#8d8d8d]">ZADZWOŃ TERAZ</p>
+                  <p className="text-lg font-bold text-brand-white group-hover:text-brand-accent tracking-wide transition-colors">
+                    505 393 758
+                  </p>
+                </div>
+              </a>
 
-              </div>
+              {/* Email contact card */}
+              <a 
+                href="mailto:adrian_kruk@op.pl" 
+                className="flex items-center gap-6 p-5 border border-brand-white/5 bg-brand-bg/40 hover:border-brand-accent rounded-sm group transition-all duration-300 text-left"
+                id="contact-email-card"
+              >
+                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-bg border border-brand-accent/20 text-brand-accent group-hover:scale-110 transition-transform flex-shrink-0">
+                  <Mail size={18} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-mono tracking-widest text-[#8d8d8d]">NAPISZ WIADOMOŚĆ</p>
+                  <p className="text-lg font-bold text-brand-white group-hover:text-brand-accent tracking-wide transition-colors">
+                    adrian_kruk@op.pl
+                  </p>
+                </div>
+              </a>
 
-              {/* Facebook dynamic button integration */}
-              <div className="mt-12">
-                <a
-                  href="https://www.facebook.com/PolotBar/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-brand-white text-brand-bg text-xs font-black tracking-widest uppercase hover:bg-brand-accent hover:-translate-y-1 transition-all duration-300 rounded-sm"
-                  id="contact-fb-btn"
-                >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                  </svg>
-                  Śledź nas na Facebooku
-                </a>
+              {/* Location context card */}
+              <div 
+                className="flex items-center gap-6 p-5 border border-brand-white/5 bg-brand-bg2 rounded-sm text-left"
+                id="contact-location-card"
+              >
+                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-bg border border-brand-white/10 text-brand-white flex-shrink-0">
+                  <MapPin size={18} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-mono tracking-widest text-[#8d8d8d]">NASZA LOKALIZACJA</p>
+                  <p className="text-sm sm:text-base font-semibold text-brand-white tracking-wide">
+                    03-983, Warszawa, Woj. Mazowieckie
+                  </p>
+                </div>
               </div>
 
             </div>
 
-            {/* Right side high contrast creative grid frame */}
-            <div className="lg:col-span-5 reveal-item relative">
-              <div className="relative h-full min-h-[300px] flex items-center justify-center overflow-hidden border border-brand-white/5 rounded-sm bg-brand-bg/60">
-                <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-brand-bg2 to-transparent opacity-50" />
-              </div>
+            {/* Facebook dynamic button integration */}
+            <div className="mt-12">
+              <a
+                href="https://www.facebook.com/PolotBar/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-brand-white text-brand-bg text-xs font-black tracking-widest uppercase hover:bg-brand-accent hover:-translate-y-1 transition-all duration-300 rounded-sm"
+                id="contact-fb-btn"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                </svg>
+                Śledź nas na Facebooku
+              </a>
             </div>
 
           </div>
@@ -812,9 +802,8 @@ export default function App() {
 
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-10 text-[11px] font-mono text-[#5d5d5d] tracking-wide text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 pt-10 text-[11px] font-mono text-[#5d5d5d] tracking-wide text-center">
             <p>© 2026 Biały Kruk — Mobilny Koktajl Bar | Warszawa. Wszystkie prawa zastrzeżone.</p>
-            <p>Projekt i realizacja: Kruk Event Inicjatywy</p>
           </div>
         </div>
       </footer>
